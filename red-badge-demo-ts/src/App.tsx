@@ -1,26 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import PropsExample from "./components/PropsExample";
+import PropsMapping from "./components/PropsMapping"
 
 function App() {
+  const visitedPlaces = ['Outer Banks', 'Fort Myers', 'Port St. Joe', 'Gulf Shores', 'Domincan Republic', 'Orlando' ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <PropsExample name = "Tom" business = "MySpace"/>
+      <PropsMapping  visited = {visitedPlaces}/>
     </div>
-  );
+  )
 }
 
 export default App;
